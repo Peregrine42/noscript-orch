@@ -1,18 +1,18 @@
 Given 'there are instruments in the database' do
-  Instrument.create!(name: 'Saxophone')
-  @target = Instrument.create!(name: 'Piano')
+  Instrument.create!(name: 'saxophone')
+  @target = Instrument.create!(name: 'piano')
 end
 
 Given 'I am on the New Order page' do
-  pending
+  visit '/orders/new'
 end
 
 Given 'I add an instrument to the order' do
-  pending
+  check "#{@target.name}"
 end
 
 When 'I press OK' do
-  pending
+  click_on "ok"
 end
 
 Then "the new order's name appears \
